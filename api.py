@@ -5,10 +5,10 @@ from joblib import load
 MLAsAPI_app = FastAPI()
 
 
-@MLCalAsAPI_app.post("/predict/")
+@MLAsAPI_app.post("/predict/")
 def predictS(a:int = Body(...),b:int = Body(...),c:int = Body(...)):
 
-    model_file = "/home/kali/Downloads/fast_api/MLCalAsAPI/model.pkl"
+    model_file = "path_to_model"
 
     predict = load(model_file) # Load "model.pkl"
     print ('Model loaded')
